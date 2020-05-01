@@ -1,0 +1,4 @@
+[submodule "CRDT"]
+	path = CRDT
+	url = /Users/volodymyrhryhoriev/Desktop/Diplom/CRDT
+	branch = develop
