@@ -6,6 +6,7 @@
 //  Copyright © 2020 Volodymyr Hryhoriev. All rights reserved.
 //
 
+import TodoModel
 import CRDT
 
 extension TodoItem {
@@ -19,9 +20,9 @@ extension TodoItem {
 
 extension TodoItemDTO {
     init(bo: TodoItem) {
-        self.id = bo.id
-        self.title = MVRegister(value: bo.title)
-        self.tags = AWSet(bo.tags)
-        self.isDone = EWFlag(bo.isDone)
+        self.init(id: bo.id,
+                  title: MVRegister(value: bo.title),
+                  tags: AWSet(bo.tags),
+                  isDone: EWFlag(bo.isDone))
     }
 }

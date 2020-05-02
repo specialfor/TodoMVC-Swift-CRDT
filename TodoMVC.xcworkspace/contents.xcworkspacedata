@@ -12,17 +12,21 @@
       location = "group:CRDT"
       name = "CRDT">
       <FileRef
-         location = "group:README.md">
-      </FileRef>
-      <FileRef
-         location = "group:Package.swift">
-      </FileRef>
-      <FileRef
          location = "group:CRDT.xcodeproj">
       </FileRef>
    </Group>
    <Group
       location = "group:Server"
       name = "Server">
+      <FileRef
+         location = "group:TodoMVC-Server/TodoMVC-Server.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:TodoKit"
+      name = "TodoKit">
+      <FileRef
+         location = "group:TodoModel/TodoModel.xcodeproj">
+      </FileRef>
    </Group>
 </Workspace>

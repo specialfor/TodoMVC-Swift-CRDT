@@ -88,3 +88,22 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+# Server/TodoMVC-Server
+Server/TodoMVC-Server/**/Packages
+Server/TodoMVC-Server/**/.build
+Server/TodoMVC-Server/**/xcuserdata
+Server/TodoMVC-Server/**/*.xcodeproj
+Server/TodoMVC-Server/**/DerivedData/
+Server/TodoMVC-Server/**/.DS_Store
+Server/TodoMVC-Server/**/db.sqlite
+Server/TodoMVC-Server/**/.swiftpm
+
+TodoKit/TodoModel/**/Packages
+TodoKit/TodoModel/**/.build
+TodoKit/TodoModel/**/xcuserdata
+TodoKit/TodoModel/**/*.xcodeproj
+TodoKit/TodoModel/**/DerivedData/
+TodoKit/TodoModel/**/.DS_Store
+TodoKit/TodoModel/**/db.sqlite
+TodoKit/TodoModel/**/.swiftpm

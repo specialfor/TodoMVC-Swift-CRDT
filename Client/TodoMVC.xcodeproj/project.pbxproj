@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		4B0C734624576F0900B4AD3C /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C734524576F0900B4AD3C /* TodoItemCell.swift */; };
 		4B0EF1852458B0DD003D2E99 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0EF1842458B0DD003D2E99 /* TodoItem.swift */; };
-		4B11FEF7245C4B8D005DC9FA /* TodoItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B11FEF6245C4B8D005DC9FA /* TodoItemDTO.swift */; };
 		4B11FEFA245C4BD3005DC9FA /* TodoItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B11FEF9245C4BD3005DC9FA /* TodoItemMapper.swift */; };
 		4B5B17002458AD7B002F56AE /* TodoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B16FF2458AD7B002F56AE /* TodoDetailsViewController.swift */; };
 		4B5B17042458ADAF002F56AE /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B17032458ADAF002F56AE /* TagCell.swift */; };
-		4B8E29C6245A195F00F18B34 /* CRDT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8E29C5245A195F00F18B34 /* CRDT.framework */; };
-		4B8E29C7245A195F00F18B34 /* CRDT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8E29C5245A195F00F18B34 /* CRDT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B689143245C9DDA0089DA08 /* TodoModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B689142245C9DDA0089DA08 /* TodoModel.framework */; };
+		4B689144245C9DDA0089DA08 /* TodoModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B689142245C9DDA0089DA08 /* TodoModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B9CD2D92458C2A200E515A1 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9CD2D82458C2A200E515A1 /* Store.swift */; };
 		4B9CD2DD2459F86F00E515A1 /* KeyboardLayoutGuide in Frameworks */ = {isa = PBXBuildFile; productRef = 4B9CD2DC2459F86F00E515A1 /* KeyboardLayoutGuide */; };
 		4BA692B024576031009EA08A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA692AF24576031009EA08A /* AppDelegate.swift */; };
@@ -37,13 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4B8E29C8245A196000F18B34 /* Embed Frameworks */ = {
+		4B689145245C9DDA0089DA08 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4B8E29C7245A195F00F18B34 /* CRDT.framework in Embed Frameworks */,
+				4B689144245C9DDA0089DA08 /* TodoModel.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,10 +52,12 @@
 /* Begin PBXFileReference section */
 		4B0C734524576F0900B4AD3C /* TodoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
 		4B0EF1842458B0DD003D2E99 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		4B11FEF6245C4B8D005DC9FA /* TodoItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemDTO.swift; sourceTree = "<group>"; };
 		4B11FEF9245C4BD3005DC9FA /* TodoItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemMapper.swift; sourceTree = "<group>"; };
 		4B5B16FF2458AD7B002F56AE /* TodoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsViewController.swift; sourceTree = "<group>"; };
 		4B5B17032458ADAF002F56AE /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		4B689140245C9DCF0089DA08 /* TodoModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TodoModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B689142245C9DDA0089DA08 /* TodoModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TodoModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6E22DB245C8411004EC26F /* libTodoModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTodoModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8E29C5245A195F00F18B34 /* CRDT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CRDT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9CD2D82458C2A200E515A1 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		4BA692AC24576031009EA08A /* TodoMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B689143245C9DDA0089DA08 /* TodoModel.framework in Frameworks */,
 				4B9CD2DD2459F86F00E515A1 /* KeyboardLayoutGuide in Frameworks */,
-				4B8E29C6245A195F00F18B34 /* CRDT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,18 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				4B0EF1822458B0C3003D2E99 /* BO */,
-				4B11FEF5245C4B71005DC9FA /* DTO */,
 				4B11FEF8245C4BC4005DC9FA /* Mappers */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		4B11FEF5245C4B71005DC9FA /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				4B11FEF6245C4B8D005DC9FA /* TodoItemDTO.swift */,
-			);
-			path = DTO;
 			sourceTree = "<group>";
 		};
 		4B11FEF8245C4BC4005DC9FA /* Mappers */ = {
@@ -170,6 +162,9 @@
 		4B8E29C4245A195F00F18B34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B689142245C9DDA0089DA08 /* TodoModel.framework */,
+				4B689140245C9DCF0089DA08 /* TodoModel.framework */,
+				4B6E22DB245C8411004EC26F /* libTodoModel.a */,
 				4B8E29C5245A195F00F18B34 /* CRDT.framework */,
 			);
 			name = Frameworks;
@@ -263,7 +258,7 @@
 				4BA692A824576031009EA08A /* Sources */,
 				4BA692A924576031009EA08A /* Frameworks */,
 				4BA692AA24576031009EA08A /* Resources */,
-				4B8E29C8245A196000F18B34 /* Embed Frameworks */,
+				4B689145245C9DDA0089DA08 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,7 +365,6 @@
 				4BA692B024576031009EA08A /* AppDelegate.swift in Sources */,
 				4B0C734624576F0900B4AD3C /* TodoItemCell.swift in Sources */,
 				4BA692B224576031009EA08A /* SceneDelegate.swift in Sources */,
-				4B11FEF7245C4B8D005DC9FA /* TodoItemDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

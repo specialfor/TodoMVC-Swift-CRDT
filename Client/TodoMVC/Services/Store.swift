@@ -6,7 +6,7 @@
 //  Copyright © 2020 Volodymyr Hryhoriev. All rights reserved.
 //
 
-import CRDT
+import TodoModel
 import Foundation
 
 final class Store {
