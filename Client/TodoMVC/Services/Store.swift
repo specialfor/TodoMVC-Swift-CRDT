@@ -25,7 +25,7 @@ final class Store {
             .map(TodoItem.init(dto:))
             .sorted { $0.id > $1.id }
     }
-    private var todoSet: AWSet<TodoItemDTO> = []
+    var todoSet: AWSet<TodoItemDTO> = []
 
     func add(item: TodoItem) {
         let dto = TodoItemDTO(bo: item)
@@ -57,6 +57,11 @@ final class Store {
             return
         }
         todoSet.remove(dto)
+        saveTodoItems()
+    }
+
+    func save(set: AWSet<TodoItemDTO>) {
+        todoSet.merge(set)
         saveTodoItems()
     }
 }

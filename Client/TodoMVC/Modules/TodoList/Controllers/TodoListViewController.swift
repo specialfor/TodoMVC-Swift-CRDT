@@ -8,8 +8,11 @@
 
 import UIKit
 import KeyboardLayoutGuide
+import KRProgressHUD
 
 final class TodoListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+
+    private let presenter = TodoListPresenter()
 
     // MARK: - Outlets
 
@@ -39,6 +42,34 @@ final class TodoListViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     // MARK: - Actions
+
+    @IBAction func download(_ sender: Any) {
+        KRProgressHUD.show(withMessage: "Downloading...")
+        presenter.download { [weak self] isSuccess in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+
+                if isSuccess {
+                    KRProgressHUD.showSuccess()
+                } else {
+                    KRProgressHUD.showError()
+                }
+            }
+        }
+    }
+
+    @IBAction func upload(_ sender: Any) {
+        KRProgressHUD.show(withMessage: "Uploading...")
+        presenter.upload { isSuccess in
+            DispatchQueue.main.async {
+                if isSuccess {
+                    KRProgressHUD.showSuccess()
+                } else {
+                    KRProgressHUD.showError()
+                }
+            }
+        }
+    }
 
     @IBAction private func create(_ sender: Any) {
         Store.shared.add(

@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-1440" y="-43"/>
         </scene>
-        <!--Todo List View Controller-->
+        <!--TodoMVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TodoListViewController" customModule="TodoMVC" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +140,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="x4a-zz-0am"/>
+                    <navigationItem key="navigationItem" title="TodoMVC" id="x4a-zz-0am">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="baseline_arrow_downward_black_24pt" id="TGc-pK-lYy">
+                            <connections>
+                                <action selector="download:" destination="BYZ-38-t0r" id="HQh-2q-4RX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="baseline_arrow_upward_black_24pt" id="4HA-pC-RiP">
+                            <connections>
+                                <action selector="upload:" destination="BYZ-38-t0r" id="shp-CY-6mm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomActionsView" destination="SrB-hl-miA" id="xfi-0k-Tee"/>
                         <outlet property="createButton" destination="O8w-25-xA0" id="NQu-3X-Jy4"/>
@@ -153,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="-510" y="-44"/>
         </scene>
-        <!--Todo Details View Controller-->
+        <!--TodoMVC-->
         <scene sceneID="UW1-LL-GYe">
             <objects>
                 <viewController id="moy-cw-rvk" customClass="TodoDetailsViewController" customModule="TodoMVC" customModuleProvider="target" sceneMemberID="viewController">
@@ -253,7 +264,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8TR-bH-IKG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vyd-pF-yRR">
+                    <navigationItem key="navigationItem" title="TodoMVC" id="Vyd-pF-yRR">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="baseline_radio_button_unchecked_black_24pt" id="REv-Wx-f6l">
                             <connections>
                                 <action selector="toggleDone:" destination="moy-cw-rvk" id="Iyd-k7-Z1c"/>
@@ -273,6 +284,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="baseline_arrow_downward_black_24pt" width="24" height="24"/>
+        <image name="baseline_arrow_upward_black_24pt" width="24" height="24"/>
         <image name="baseline_check_circle_outline_black_24pt" width="24" height="24"/>
         <image name="baseline_radio_button_unchecked_black_24pt" width="24" height="24"/>
     </resources>

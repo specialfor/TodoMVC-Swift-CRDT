@@ -25,6 +25,8 @@
 		4BA692C724576037009EA08A /* TodoMVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA692C624576037009EA08A /* TodoMVCTests.swift */; };
 		4BC6B0E8245F0E4200C2585B /* KRProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */; };
 		4BC6B0EA245F0E4200C2585B /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */; };
+		4BC6B0B5245F069C00C2585B /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6B0B4245F069C00C2585B /* RestClient.swift */; };
+		4BC6B0B8245F0A7200C2585B /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6B0B7245F0A7200C2585B /* TodoListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		4BA692C824576037009EA08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRProgressHUD.framework; path = Carthage/Build/iOS/KRProgressHUD.framework; sourceTree = "<group>"; };
 		4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRActivityIndicatorView.framework; path = Carthage/Build/iOS/KRActivityIndicatorView.framework; sourceTree = "<group>"; };
+		4BC6B0B4245F069C00C2585B /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		4BC6B0B7245F0A7200C2585B /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4B9CD2D82458C2A200E515A1 /* Store.swift */,
+				4BC6B0B4245F069C00C2585B /* RestClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -251,9 +256,18 @@
 			isa = PBXGroup;
 			children = (
 				4B0C734324576EEC00B4AD3C /* Controllers */,
+				4BC6B0B6245F0A6200C2585B /* Presenter */,
 				4B0C734424576EF300B4AD3C /* Views */,
 			);
 			path = TodoList;
+			sourceTree = "<group>";
+		};
+		4BC6B0B6245F0A6200C2585B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4BC6B0B7245F0A7200C2585B /* TodoListPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,9 +409,11 @@
 				4BA692B424576031009EA08A /* TodoListViewController.swift in Sources */,
 				4B11FEFA245C4BD3005DC9FA /* TodoItemMapper.swift in Sources */,
 				4B9CD2D92458C2A200E515A1 /* Store.swift in Sources */,
+				4BC6B0B8245F0A7200C2585B /* TodoListPresenter.swift in Sources */,
 				4B5B17042458ADAF002F56AE /* TagCell.swift in Sources */,
 				4BA692B024576031009EA08A /* AppDelegate.swift in Sources */,
 				4B0C734624576F0900B4AD3C /* TodoItemCell.swift in Sources */,
+				4BC6B0B5245F069C00C2585B /* RestClient.swift in Sources */,
 				4BA692B224576031009EA08A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
