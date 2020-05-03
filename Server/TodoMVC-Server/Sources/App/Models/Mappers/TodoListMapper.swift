@@ -5,25 +5,22 @@
 //  Created by Volodymyr Hryhoriev on 02.05.2020.
 //
 
-import TodoModel
 import Foundation
+import TodoModel
+import CRDT
 
 extension TodoList {
-    convenience init(list: [TodoItemDTO]) {
-        self.init(list: list.compactMap { $0.data })
+    convenience init(set: AWSet<TodoItemDTO>) {
+        self.init(data: set.data)
     }
 
-    var dtoList: [TodoItemDTO] {
-        return list.compactMap(TodoItemDTO.create(from:))
+    var awSet: AWSet<TodoItemDTO> {
+        return try! JSONDecoder().decode(AWSet<TodoItemDTO>.self, from: data)
     }
 }
 
-extension TodoItemDTO {
-    static func create(from data: Data) -> TodoItemDTO? {
-        return try? JSONDecoder().decode(TodoItemDTO.self, from: data)
-    }
-
-    var data: Data? {
-        return try? JSONEncoder().encode(self)
+extension AWSet where T == TodoItemDTO {
+    var data: Data {
+        return try! JSONEncoder().encode(self)
     }
 }

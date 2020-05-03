@@ -11,7 +11,7 @@ struct TodoListMigration: Migration {
     func prepare(on database: Database) -> EventLoopFuture<Void> {
         database.schema(TodoList.schema)
             .id()
-            .field("list", .array(of: .data))
+            .field("data", .array(of: .data))
             .create()
     }
 

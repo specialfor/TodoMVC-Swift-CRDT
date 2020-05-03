@@ -16,13 +16,13 @@ final class TodoList: Model {
     @ID(custom: .id)
     var id: Int?
 
-    @Field(key: "list")
-    var list: [Data]
+    @Field(key: "data")
+    var data: Data
 
     init() {}
 
-    init(list: [Data] = []) {
+    init(data: Data) {
         self.id = TodoList.id
-        self.list = list
+        self.data = data
     }
 }
