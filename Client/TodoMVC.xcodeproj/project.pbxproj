@@ -23,6 +23,8 @@
 		4BA692B924576037009EA08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA692B824576037009EA08A /* Assets.xcassets */; };
 		4BA692BC24576037009EA08A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA692BA24576037009EA08A /* LaunchScreen.storyboard */; };
 		4BA692C724576037009EA08A /* TodoMVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA692C624576037009EA08A /* TodoMVCTests.swift */; };
+		4BC6B0E8245F0E4200C2585B /* KRProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */; };
+		4BC6B0EA245F0E4200C2585B /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		4BA692C224576037009EA08A /* TodoMVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoMVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA692C624576037009EA08A /* TodoMVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMVCTests.swift; sourceTree = "<group>"; };
 		4BA692C824576037009EA08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRProgressHUD.framework; path = Carthage/Build/iOS/KRProgressHUD.framework; sourceTree = "<group>"; };
+		4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRActivityIndicatorView.framework; path = Carthage/Build/iOS/KRActivityIndicatorView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B689143245C9DDA0089DA08 /* TodoModel.framework in Frameworks */,
+				4BC6B0EA245F0E4200C2585B /* KRActivityIndicatorView.framework in Frameworks */,
+				4BC6B0E8245F0E4200C2585B /* KRProgressHUD.framework in Frameworks */,
 				4B9CD2DD2459F86F00E515A1 /* KeyboardLayoutGuide in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +168,8 @@
 		4B8E29C4245A195F00F18B34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */,
+				4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */,
 				4B689142245C9DDA0089DA08 /* TodoModel.framework */,
 				4B689140245C9DCF0089DA08 /* TodoModel.framework */,
 				4B6E22DB245C8411004EC26F /* libTodoModel.a */,
@@ -259,6 +267,7 @@
 				4BA692A924576031009EA08A /* Frameworks */,
 				4BA692AA24576031009EA08A /* Resources */,
 				4B689145245C9DDA0089DA08 /* Embed Frameworks */,
+				4BC6B0EC245F0E8300C2585B /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -350,6 +359,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BC6B0EC245F0E8300C2585B /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/KRProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KRActivityIndicatorView.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KRProgressHUD.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KRActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4BA692A824576031009EA08A /* Sources */ = {
@@ -526,6 +560,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQ7UXJJ9YY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TodoMVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,6 +582,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQ7UXJJ9YY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TodoMVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
