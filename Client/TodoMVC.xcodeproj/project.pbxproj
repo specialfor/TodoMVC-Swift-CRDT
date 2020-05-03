@@ -10,10 +10,10 @@
 		4B0C734624576F0900B4AD3C /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C734524576F0900B4AD3C /* TodoItemCell.swift */; };
 		4B0EF1852458B0DD003D2E99 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0EF1842458B0DD003D2E99 /* TodoItem.swift */; };
 		4B11FEFA245C4BD3005DC9FA /* TodoItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B11FEF9245C4BD3005DC9FA /* TodoItemMapper.swift */; };
+		4B2745D5245F31730034043F /* TodoModel in Frameworks */ = {isa = PBXBuildFile; productRef = 4B2745D4245F31730034043F /* TodoModel */; };
 		4B5B17002458AD7B002F56AE /* TodoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B16FF2458AD7B002F56AE /* TodoDetailsViewController.swift */; };
 		4B5B17042458ADAF002F56AE /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B17032458ADAF002F56AE /* TagCell.swift */; };
-		4B689143245C9DDA0089DA08 /* TodoModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B689142245C9DDA0089DA08 /* TodoModel.framework */; };
-		4B689144245C9DDA0089DA08 /* TodoModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B689142245C9DDA0089DA08 /* TodoModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B612569245F2C7F00BE68B5 /* CRDT in Frameworks */ = {isa = PBXBuildFile; productRef = 4B612568245F2C7F00BE68B5 /* CRDT */; };
 		4B9CD2D92458C2A200E515A1 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9CD2D82458C2A200E515A1 /* Store.swift */; };
 		4B9CD2DD2459F86F00E515A1 /* KeyboardLayoutGuide in Frameworks */ = {isa = PBXBuildFile; productRef = 4B9CD2DC2459F86F00E515A1 /* KeyboardLayoutGuide */; };
 		4BA692B024576031009EA08A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA692AF24576031009EA08A /* AppDelegate.swift */; };
@@ -23,10 +23,10 @@
 		4BA692B924576037009EA08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA692B824576037009EA08A /* Assets.xcassets */; };
 		4BA692BC24576037009EA08A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA692BA24576037009EA08A /* LaunchScreen.storyboard */; };
 		4BA692C724576037009EA08A /* TodoMVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA692C624576037009EA08A /* TodoMVCTests.swift */; };
-		4BC6B0E8245F0E4200C2585B /* KRProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */; };
-		4BC6B0EA245F0E4200C2585B /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */; };
 		4BC6B0B5245F069C00C2585B /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6B0B4245F069C00C2585B /* RestClient.swift */; };
 		4BC6B0B8245F0A7200C2585B /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6B0B7245F0A7200C2585B /* TodoListPresenter.swift */; };
+		4BC6B0E8245F0E4200C2585B /* KRProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */; };
+		4BC6B0EA245F0E4200C2585B /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,20 +38,6 @@
 			remoteInfo = TodoMVC;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4B689145245C9DDA0089DA08 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4B689144245C9DDA0089DA08 /* TodoModel.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B0C734524576F0900B4AD3C /* TodoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
@@ -75,10 +61,10 @@
 		4BA692C224576037009EA08A /* TodoMVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoMVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA692C624576037009EA08A /* TodoMVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMVCTests.swift; sourceTree = "<group>"; };
 		4BA692C824576037009EA08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRProgressHUD.framework; path = Carthage/Build/iOS/KRProgressHUD.framework; sourceTree = "<group>"; };
-		4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRActivityIndicatorView.framework; path = Carthage/Build/iOS/KRActivityIndicatorView.framework; sourceTree = "<group>"; };
 		4BC6B0B4245F069C00C2585B /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		4BC6B0B7245F0A7200C2585B /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
+		4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRProgressHUD.framework; path = Carthage/Build/iOS/KRProgressHUD.framework; sourceTree = "<group>"; };
+		4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRActivityIndicatorView.framework; path = Carthage/Build/iOS/KRActivityIndicatorView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B689143245C9DDA0089DA08 /* TodoModel.framework in Frameworks */,
 				4BC6B0EA245F0E4200C2585B /* KRActivityIndicatorView.framework in Frameworks */,
+				4B2745D5245F31730034043F /* TodoModel in Frameworks */,
 				4BC6B0E8245F0E4200C2585B /* KRProgressHUD.framework in Frameworks */,
+				4B612569245F2C7F00BE68B5 /* CRDT in Frameworks */,
 				4B9CD2DD2459F86F00E515A1 /* KeyboardLayoutGuide in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +267,6 @@
 				4BA692A824576031009EA08A /* Sources */,
 				4BA692A924576031009EA08A /* Frameworks */,
 				4BA692AA24576031009EA08A /* Resources */,
-				4B689145245C9DDA0089DA08 /* Embed Frameworks */,
 				4BC6B0EC245F0E8300C2585B /* Carthage */,
 			);
 			buildRules = (
@@ -290,6 +276,8 @@
 			name = TodoMVC;
 			packageProductDependencies = (
 				4B9CD2DC2459F86F00E515A1 /* KeyboardLayoutGuide */,
+				4B612568245F2C7F00BE68B5 /* CRDT */,
+				4B2745D4245F31730034043F /* TodoModel */,
 			);
 			productName = TodoMVC;
 			productReference = 4BA692AC24576031009EA08A /* TodoMVC.app */;
@@ -343,6 +331,8 @@
 			mainGroup = 4BA692A324576031009EA08A;
 			packageReferences = (
 				4B9CD2DB2459F86F00E515A1 /* XCRemoteSwiftPackageReference "KeyboardLayoutGuide" */,
+				4B612567245F2C7F00BE68B5 /* XCRemoteSwiftPackageReference "CRDT" */,
+				4B2745D3245F31730034043F /* XCRemoteSwiftPackageReference "TodoModel" */,
 			);
 			productRefGroup = 4BA692AD24576031009EA08A /* Products */;
 			projectDirPath = "";
@@ -691,6 +681,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4B2745D3245F31730034043F /* XCRemoteSwiftPackageReference "TodoModel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/specialfor/TodoModel";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4B612567245F2C7F00BE68B5 /* XCRemoteSwiftPackageReference "CRDT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/specialfor/CRDT";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 		4B9CD2DB2459F86F00E515A1 /* XCRemoteSwiftPackageReference "KeyboardLayoutGuide" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/freshOS/KeyboardLayoutGuide";
@@ -702,6 +708,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4B2745D4245F31730034043F /* TodoModel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B2745D3245F31730034043F /* XCRemoteSwiftPackageReference "TodoModel" */;
+			productName = TodoModel;
+		};
+		4B612568245F2C7F00BE68B5 /* CRDT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B612567245F2C7F00BE68B5 /* XCRemoteSwiftPackageReference "CRDT" */;
+			productName = CRDT;
+		};
 		4B9CD2DC2459F86F00E515A1 /* KeyboardLayoutGuide */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4B9CD2DB2459F86F00E515A1 /* XCRemoteSwiftPackageReference "KeyboardLayoutGuide" */;

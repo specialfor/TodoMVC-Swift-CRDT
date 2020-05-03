@@ -2,3 +2,6 @@
 	path = CRDT
 	url = /Users/volodymyrhryhoriev/Desktop/Diplom/CRDT
 	branch = develop
+[submodule "TodoKit/TodoModel"]
+	path = TodoKit/TodoModel
+	url = /Users/volodymyrhryhoriev/Desktop/Diplom/TodoKit/TodoModel

@@ -2,12 +2,30 @@
   "object": {
     "pins": [
       {
+        "package": "CRDT",
+        "repositoryURL": "https://github.com/specialfor/CRDT",
+        "state": {
+          "branch": "develop",
+          "revision": "4de46e02ce837543541a3a93209e4d9c96ca9ae5",
+          "version": null
+        }
+      },
+      {
         "package": "KeyboardLayoutGuide",
         "repositoryURL": "https://github.com/freshOS/KeyboardLayoutGuide",
         "state": {
           "branch": null,
           "revision": "2a62a1a0b64e3c7db227c7da67e94292c1897903",
           "version": "1.7.0"
+        }
+      },
+      {
+        "package": "TodoModel",
+        "repositoryURL": "https://github.com/specialfor/TodoModel",
+        "state": {
+          "branch": "master",
+          "revision": "7800ae41ebf15db61b28f94dc8087eba8184f9d3",
+          "version": null
         }
       }
     ]

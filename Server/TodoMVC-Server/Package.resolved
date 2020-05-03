@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "CRDT",
+        "repositoryURL": "https://github.com/specialfor/CRDT",
+        "state": {
+          "branch": "develop",
+          "revision": "4de46e02ce837543541a3a93209e4d9c96ca9ae5",
+          "version": null
+        }
+      },
+      {
         "package": "fluent",
         "repositoryURL": "https://github.com/vapor/fluent.git",
         "state": {
@@ -161,6 +170,15 @@
           "branch": null,
           "revision": "ae213938e151964aa691f0e902462fbe06baeeb6",
           "version": "2.7.1"
+        }
+      },
+      {
+        "package": "TodoModel",
+        "repositoryURL": "https://github.com/specialfor/TodoModel",
+        "state": {
+          "branch": "master",
+          "revision": "7800ae41ebf15db61b28f94dc8087eba8184f9d3",
+          "version": null
         }
       },
       {
