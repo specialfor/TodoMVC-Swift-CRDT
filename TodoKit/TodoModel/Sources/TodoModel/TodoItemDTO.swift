@@ -8,7 +8,7 @@
 
 import CRDT
 
-public struct TodoItemDTO: Hashable, Codable {
+public struct TodoItemDTO: Hashable, Codable, Mergable {
     public typealias ID = String
 
     public var id: ID
@@ -22,6 +22,16 @@ public struct TodoItemDTO: Hashable, Codable {
         self.tags = tags
         self.isDone = isDone
     }
+
+    // MARK: - Mergable
+
+    public mutating func merge(_ object: TodoItemDTO) {
+        title.merge(object.title)
+        tags.merge(object.tags)
+        isDone.merge(object.isDone)
+    }
+
+    // MARK: - Hashable
 
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)

@@ -7,6 +7,7 @@
 //
 
 import TodoModel
+import CRDT
 import Foundation
 
 final class Store {
@@ -16,7 +17,7 @@ final class Store {
             todoSet = []
             return
         }
-        todoSet = try! JSONDecoder().decode(Set<TodoItemDTO>.self, from: data)
+        todoSet = try! JSONDecoder().decode(AWSet<TodoItemDTO>.self, from: data)
     }
 
     var todoList: [TodoItem] {
@@ -24,7 +25,7 @@ final class Store {
             .map(TodoItem.init(dto:))
             .sorted { $0.id > $1.id }
     }
-    private var todoSet: Set<TodoItemDTO> = []
+    private var todoSet: AWSet<TodoItemDTO> = []
 
     func add(item: TodoItem) {
         let dto = TodoItemDTO(bo: item)
