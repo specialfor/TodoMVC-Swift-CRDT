@@ -43,6 +43,7 @@ final class RestClient {
         var urlRequest = URLRequest(url: RestClient.url)
         urlRequest.httpMethod = "post"
         urlRequest.httpBody = try! JSONEncoder().encode(list)
+        urlRequest.allHTTPHeaderFields = ["Content-Type": "application/json"]
 
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             guard error == nil else {
