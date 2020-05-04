@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct TodoItem: Hashable {
     private static var _id = UserDefaults.standard.integer(forKey: "id")
@@ -17,7 +18,7 @@ struct TodoItem: Hashable {
     var isDone: Bool
 
     init(title: String, tags: Set<String>, isDone: Bool) {
-        self.id = "\(TodoItem._id)"
+        self.id = "\(UIDevice.current.identifierForVendor!)_\(TodoItem._id)"
 
         TodoItem._id += 1
         UserDefaults.standard.set(TodoItem._id, forKey: "id")

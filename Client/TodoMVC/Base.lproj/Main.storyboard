@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="68d-N9-pL8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todo-item" rowHeight="80" id="Fmr-I0-Vkj" customClass="TodoItemCell" customModule="TodoMVC" customModuleProvider="target">
@@ -104,7 +104,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SrB-hl-miA">
-                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <rect key="frame" x="16" y="753" width="382" height="44"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What needs to be done?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldH-QR-o5a">
                                         <rect key="frame" x="0.0" y="0.0" width="286.5" height="44"/>
@@ -140,18 +140,38 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="TodoMVC" id="x4a-zz-0am">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="baseline_arrow_downward_black_24pt" id="TGc-pK-lYy">
-                            <connections>
-                                <action selector="download:" destination="BYZ-38-t0r" id="HQh-2q-4RX"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="baseline_arrow_upward_black_24pt" id="4HA-pC-RiP">
-                            <connections>
-                                <action selector="upload:" destination="BYZ-38-t0r" id="shp-CY-6mm"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Item" image="icloud.and.arrow.down" catalog="system" id="TGc-pK-lYy">
+                                <connections>
+                                    <action selector="download:" destination="BYZ-38-t0r" id="HQh-2q-4RX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="mwz-fP-cij"/>
+                            <barButtonItem id="4mi-Cw-dLa"/>
+                            <barButtonItem title="Item" image="icloud.and.arrow.up" catalog="system" id="aXs-mD-qtB">
+                                <connections>
+                                    <action selector="upload:" destination="BYZ-38-t0r" id="V7m-bv-l5j"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem image="trash" catalog="system" id="qhT-0w-nnY">
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" id="iQ1-fP-oE7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="WA7-o2-fLo"/>
+                            <barButtonItem id="CBn-Yl-2Sd"/>
+                            <barButtonItem title="Clear server" image="xmark.icloud" catalog="system" id="lQh-wW-szU">
+                                <connections>
+                                    <action selector="clearServer:" destination="BYZ-38-t0r" id="RAx-qK-lRo"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bottomActionsView" destination="SrB-hl-miA" id="xfi-0k-Tee"/>
                         <outlet property="createButton" destination="O8w-25-xA0" id="NQu-3X-Jy4"/>
@@ -193,7 +213,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zTC-K8-Fyb">
-                                <rect key="frame" x="0.0" y="196" width="414" height="622"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="573"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tag-item" rowHeight="44" id="Yz3-Lr-85X" customClass="TagCell" customModule="TodoMVC" customModuleProvider="target">
@@ -233,7 +253,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-XH-3vj">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="snr-Kh-5fT"/>
                                 </constraints>
@@ -284,9 +304,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_arrow_downward_black_24pt" width="24" height="24"/>
-        <image name="baseline_arrow_upward_black_24pt" width="24" height="24"/>
         <image name="baseline_check_circle_outline_black_24pt" width="24" height="24"/>
         <image name="baseline_radio_button_unchecked_black_24pt" width="24" height="24"/>
+        <image name="icloud.and.arrow.down" catalog="system" width="128" height="112"/>
+        <image name="icloud.and.arrow.up" catalog="system" width="128" height="106"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="xmark.icloud" catalog="system" width="128" height="88"/>
     </resources>
 </document>

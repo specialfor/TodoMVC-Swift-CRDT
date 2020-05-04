@@ -27,4 +27,10 @@ final class TodoListPresenter {
             completion(isSuccess)
         }
     }
+
+    func clear(_ completion: @escaping (Bool) -> Void) {
+        restClient.clear() { isSuccess in
+            completion(isSuccess)
+        }
+    }
 }

@@ -64,4 +64,9 @@ final class Store {
         todoSet.merge(set)
         saveTodoItems()
     }
+
+    func clear() {
+        todoSet = []
+        saveTodoItems()
+    }
 }

@@ -51,6 +51,32 @@ final class RestClient {
                 return
             }
 
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(false)
+                return
+            }
+
+            completion(true)
+        }
+
+        dataTask.resume()
+    }
+
+    func clear(_ completion: @escaping (Bool) -> Void) {
+        var urlRequest = URLRequest(url: RestClient.url)
+        urlRequest.httpMethod = "delete"
+
+        let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                completion(false)
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(false)
+                return
+            }
+
             completion(true)
         }
 

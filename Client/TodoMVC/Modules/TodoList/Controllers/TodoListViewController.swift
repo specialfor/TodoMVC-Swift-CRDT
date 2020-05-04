@@ -71,6 +71,24 @@ final class TodoListViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
+    @IBAction func clearServer(_ sender: Any) {
+        KRProgressHUD.show(withMessage: "Clearing...")
+        presenter.clear { isSuccess in
+            DispatchQueue.main.async {
+                if isSuccess {
+                    KRProgressHUD.showSuccess()
+                } else {
+                    KRProgressHUD.showError()
+                }
+            }
+        }
+    }
+
+    @IBAction func clear(_ sender: Any) {
+        Store.shared.clear()
+        tableView.reloadData()
+    }
+
     @IBAction private func create(_ sender: Any) {
         Store.shared.add(
             item: .init(
