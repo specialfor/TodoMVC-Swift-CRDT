@@ -59,26 +59,31 @@
                                                     <rect key="frame" x="68" y="18" width="330" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdi-1k-Epv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="23.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="W1W-4l-OwI">
-                                                            <rect key="frame" x="0.0" y="20.5" width="330" height="23.5"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyr-Lm-CHw">
+                                                            <rect key="frame" x="0.0" y="23.5" width="330" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="zPj-NZ-vuO"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="W1W-4l-OwI" firstAttribute="leading" secondItem="iyU-A4-b6T" secondAttribute="leading" id="Cw3-Kd-rwg"/>
                                                         <constraint firstItem="zdi-1k-Epv" firstAttribute="leading" secondItem="iyU-A4-b6T" secondAttribute="leading" id="H1r-hN-iIh"/>
-                                                        <constraint firstAttribute="trailing" secondItem="W1W-4l-OwI" secondAttribute="trailing" id="KHS-oD-XFV"/>
-                                                        <constraint firstAttribute="bottom" secondItem="W1W-4l-OwI" secondAttribute="bottom" id="aey-zV-vec"/>
+                                                        <constraint firstItem="Dyr-Lm-CHw" firstAttribute="top" secondItem="zdi-1k-Epv" secondAttribute="bottom" id="IW9-CS-SxA"/>
                                                         <constraint firstItem="zdi-1k-Epv" firstAttribute="top" secondItem="iyU-A4-b6T" secondAttribute="top" id="aj2-WT-sub"/>
                                                         <constraint firstAttribute="trailing" secondItem="zdi-1k-Epv" secondAttribute="trailing" id="cUc-Sz-pdQ"/>
-                                                        <constraint firstItem="W1W-4l-OwI" firstAttribute="top" secondItem="zdi-1k-Epv" secondAttribute="bottom" id="xcQ-BT-Nja"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Dyr-Lm-CHw" secondAttribute="bottom" id="eEd-0Z-Ql4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Dyr-Lm-CHw" secondAttribute="trailing" id="n8e-Z8-sp2"/>
+                                                        <constraint firstItem="Dyr-Lm-CHw" firstAttribute="leading" secondItem="iyU-A4-b6T" secondAttribute="leading" id="oHL-Wl-JwE"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -93,7 +98,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="doneButton" destination="Ror-Vt-0zy" id="yVz-M9-I4L"/>
-                                            <outlet property="tagsView" destination="W1W-4l-OwI" id="rH6-Jp-CuY"/>
+                                            <outlet property="tagsLabel" destination="Dyr-Lm-CHw" id="FJJ-TZ-br6"/>
                                             <outlet property="titleLabel" destination="zdi-1k-Epv" id="X2g-mp-WIe"/>
                                         </connections>
                                     </tableViewCell>

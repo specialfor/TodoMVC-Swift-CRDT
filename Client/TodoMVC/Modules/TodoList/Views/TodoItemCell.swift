@@ -11,7 +11,7 @@ import UIKit
 final class TodoItemCell: UITableViewCell {
 
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var tagsView: UIStackView!
+    @IBOutlet var tagsLabel: UILabel!
     @IBOutlet var doneButton: UIButton!
 
     // MARK: - Configure
@@ -26,13 +26,10 @@ final class TodoItemCell: UITableViewCell {
     }
 
     private func configureTagsView(using tags: [String]) {
-        tagsView.subviews.forEach { $0.removeFromSuperview() }
-
-        tags.forEach { tag in
-            let label = UILabel()
-            label.text = tag
-            tagsView.addArrangedSubview(label)
-        }
+        let tagsText = "Tags: " + tags.joined(separator: ", ")
+        let attributedString = NSMutableAttributedString(string: tagsText)
+        attributedString.addAttributes([.font: UIFont.boldSystemFont(ofSize: 15)], range: .init(location: 0, length: 5))
+        tagsLabel.attributedText = attributedString
     }
 
     // MARK: - Actions
