@@ -13,7 +13,7 @@ final class TodoList: Model {
     static var schema: String = "todo-list"
     static var id = 0
 
-    @ID(custom: .id)
+    @ID(custom: .id, generatedBy: .user)
     var id: Int?
 
     @Field(key: "data")
