@@ -44,7 +44,7 @@ final class Store {
             return
         }
 
-        dto.title.assign(item.title)
+        dto.title.assign(Set(item.titles))
         dto.tags.assign(Set(item.tags))
         dto.isDone.value = item.isDone
 

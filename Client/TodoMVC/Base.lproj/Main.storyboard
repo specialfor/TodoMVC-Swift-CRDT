@@ -301,11 +301,51 @@
                         <outlet property="doneButton" destination="REv-Wx-f6l" id="8Ok-kN-9do"/>
                         <outlet property="tagsTableView" destination="zTC-K8-Fyb" id="q3E-ck-Lp8"/>
                         <outlet property="titleTextField" destination="PQZ-sr-ayY" id="yYV-8n-4EN"/>
+                        <segue destination="rBJ-Za-Ayb" kind="presentation" identifier="show-conflict-resolver" id="RWk-yy-92k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnZ-Ml-hew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="444.92753623188412" y="-44.196428571428569"/>
+        </scene>
+        <!--Title Conflict Resolver View Controller-->
+        <scene sceneID="wTo-bQ-AS4">
+            <objects>
+                <viewController id="rBJ-Za-Ayb" customClass="TitleConflictResolverViewController" customModule="TodoMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7kZ-Mp-Nab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is a conflict in title. Please select one of provided solution." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ada-Nn-vLc">
+                                <rect key="frame" x="16" y="16" width="382" height="104"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-iU-pVt">
+                                <rect key="frame" x="0.0" y="120" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zRs-K0-7so" firstAttribute="trailing" secondItem="ada-Nn-vLc" secondAttribute="trailing" constant="16" id="9o8-WC-EUz"/>
+                            <constraint firstItem="D1f-iU-pVt" firstAttribute="leading" secondItem="zRs-K0-7so" secondAttribute="leading" id="Fhh-qS-PC9"/>
+                            <constraint firstItem="zRs-K0-7so" firstAttribute="trailing" secondItem="D1f-iU-pVt" secondAttribute="trailing" id="d2G-72-waF"/>
+                            <constraint firstItem="ada-Nn-vLc" firstAttribute="leading" secondItem="zRs-K0-7so" secondAttribute="leading" constant="16" id="kq3-rY-xSd"/>
+                            <constraint firstItem="ada-Nn-vLc" firstAttribute="top" secondItem="zRs-K0-7so" secondAttribute="top" constant="16" id="lrh-Fz-yJY"/>
+                            <constraint firstItem="D1f-iU-pVt" firstAttribute="top" secondItem="ada-Nn-vLc" secondAttribute="bottom" id="qly-eY-3bv"/>
+                            <constraint firstItem="zRs-K0-7so" firstAttribute="bottom" secondItem="D1f-iU-pVt" secondAttribute="bottom" id="wGU-cP-303"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zRs-K0-7so"/>
+                    </view>
+                    <connections>
+                        <outlet property="titlesTableView" destination="D1f-iU-pVt" id="crg-eK-fUu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh6-d7-Mst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501" y="-44"/>
         </scene>
     </scenes>
     <resources>

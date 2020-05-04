@@ -27,6 +27,8 @@
 		4BC6B0E8245F0E4200C2585B /* KRProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */; };
 		4BC6B0EA245F0E4200C2585B /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */; };
 		4BEAEA9C24607E1E00811CE8 /* CRDT in Frameworks */ = {isa = PBXBuildFile; productRef = 4BEAEA9B24607E1E00811CE8 /* CRDT */; };
+		4BEAEAA12460A96C00811CE8 /* TitleConflictFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEAA02460A96C00811CE8 /* TitleConflictFormatter.swift */; };
+		4BEAEAA52460AAD300811CE8 /* TitleConflictResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEAA42460AAD300811CE8 /* TitleConflictResolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		4BC6B0B7245F0A7200C2585B /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		4BC6B0E6245F0E4200C2585B /* KRProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRProgressHUD.framework; path = Carthage/Build/iOS/KRProgressHUD.framework; sourceTree = "<group>"; };
 		4BC6B0E7245F0E4200C2585B /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRActivityIndicatorView.framework; path = Carthage/Build/iOS/KRActivityIndicatorView.framework; sourceTree = "<group>"; };
+		4BEAEAA02460A96C00811CE8 /* TitleConflictFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleConflictFormatter.swift; sourceTree = "<group>"; };
+		4BEAEAA42460AAD300811CE8 /* TitleConflictResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleConflictResolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 				4BA692BD24576037009EA08A /* Info.plist */,
 				4BA692BA24576037009EA08A /* LaunchScreen.storyboard */,
 				4BA692B524576031009EA08A /* Main.storyboard */,
+				4BEAEA9D2460A95200811CE8 /* Misc */,
 				4B0EF1832458B0C9003D2E99 /* Models */,
 				4BA692D124576A36009EA08A /* Modules */,
 				4B9CD2D72458C28D00E515A1 /* Services */,
@@ -224,6 +229,7 @@
 		4BA692D124576A36009EA08A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4BEAEAA22460AAB900811CE8 /* TitleConflictResolver */,
 				4B5B16FE2458AD5A002F56AE /* TodoDetails */,
 				4BA692D424576A63009EA08A /* TodoList */,
 			);
@@ -255,6 +261,46 @@
 				4BC6B0B7245F0A7200C2585B /* TodoListPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4BEAEA9D2460A95200811CE8 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				4BEAEA9E2460A95C00811CE8 /* UI */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		4BEAEA9E2460A95C00811CE8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4BEAEA9F2460A95F00811CE8 /* Formatter */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4BEAEA9F2460A95F00811CE8 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				4BEAEAA02460A96C00811CE8 /* TitleConflictFormatter.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		4BEAEAA22460AAB900811CE8 /* TitleConflictResolver */ = {
+			isa = PBXGroup;
+			children = (
+				4BEAEAA32460AAC400811CE8 /* Controllers */,
+			);
+			path = TitleConflictResolver;
+			sourceTree = "<group>";
+		};
+		4BEAEAA32460AAC400811CE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BEAEAA42460AAD300811CE8 /* TitleConflictResolver.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +451,8 @@
 				4B0C734624576F0900B4AD3C /* TodoItemCell.swift in Sources */,
 				4BC6B0B5245F069C00C2585B /* RestClient.swift in Sources */,
 				4BA692B224576031009EA08A /* SceneDelegate.swift in Sources */,
+				4BEAEAA52460AAD300811CE8 /* TitleConflictResolver.swift in Sources */,
+				4BEAEAA12460A96C00811CE8 /* TitleConflictFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

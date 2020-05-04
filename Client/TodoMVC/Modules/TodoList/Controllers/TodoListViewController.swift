@@ -92,7 +92,7 @@ final class TodoListViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction private func create(_ sender: Any) {
         Store.shared.add(
             item: .init(
-                title: titleTextField.text ?? "",
+                titles: [titleTextField.text ?? ""],
                 tags: [],
                 isDone: false))
 
@@ -123,7 +123,7 @@ final class TodoListViewController: UIViewController, UITableViewDataSource, UIT
         let item = items[indexPath.row]
         cell.configure(
             with: .init(
-                title: item.title,
+                titles: item.titles,
                 tags: item.tags,
                 isDone: item.isDone,
                 toggleDone: {

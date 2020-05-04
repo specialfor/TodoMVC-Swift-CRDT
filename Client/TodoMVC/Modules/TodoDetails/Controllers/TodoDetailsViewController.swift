@@ -33,7 +33,7 @@ final class TodoDetailsViewController: UIViewController, UITableViewDataSource, 
 
     private func render(_ viewModel: ViewModel) {
         renderDoneButton(viewModel.isDone)
-        titleTextField.text = viewModel.title
+        renderTilteTextField(with: viewModel.titles)
         tagsTableView.reloadData()
     }
 
@@ -41,6 +41,35 @@ final class TodoDetailsViewController: UIViewController, UITableViewDataSource, 
         doneButton.image = isDone
             ? UIImage(named: "baseline_check_circle_outline_black_24pt")
             : UIImage(named: "baseline_radio_button_unchecked_black_24pt")
+    }
+
+    private func renderTilteTextField(with titles: [String]) {
+        guard titles.count == 1 else {
+            return
+        }
+
+        titleTextField.text = titles.first ?? ""
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if viewModel.titles.count > 1 {
+            performSegue(withIdentifier: "show-conflict-resolver", sender: nil)
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier,
+            identifier == "show-conflict-resolver",
+            let destination = segue.destination as? TitleConflictResolverViewController else {
+                return
+        }
+
+        destination.titles = viewModel.titles
+        destination.didTitleSelected = { [weak self] title in
+            self?.viewModel.titles = [title]
+            self?.titleTextField.text = title
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,7 +87,7 @@ final class TodoDetailsViewController: UIViewController, UITableViewDataSource, 
     }
 
     @IBAction func titleChanged(_ sender: Any) {
-        viewModel.title = titleTextField.text ?? ""
+        viewModel.titles = [titleTextField.text ?? ""]
         Store.shared.update(item: viewModel)
     }
 

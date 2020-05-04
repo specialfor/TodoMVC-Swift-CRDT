@@ -20,9 +20,13 @@ final class TodoItemCell: UITableViewCell {
 
     func configure(with viewModel: ViewModel) {
         self.viewModel = viewModel
-        titleLabel.text = viewModel.title
+        configureTitleLabel(using: viewModel.titles)
         configureTagsView(using: viewModel.tags)
         doneButton.isSelected = viewModel.isDone
+    }
+
+    private func configureTitleLabel(using titles: [String]) {
+        titleLabel.attributedText = TitleConflictFormatter.format(titles: titles)
     }
 
     private func configureTagsView(using tags: [String]) {
@@ -41,7 +45,7 @@ final class TodoItemCell: UITableViewCell {
 
 extension TodoItemCell {
     struct ViewModel {
-        let title: String
+        let titles: [String]
         let tags: [String]
         let isDone: Bool
         let toggleDone: () -> Void
