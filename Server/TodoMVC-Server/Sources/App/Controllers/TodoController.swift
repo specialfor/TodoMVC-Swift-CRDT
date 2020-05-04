@@ -31,6 +31,14 @@ struct TodoController {
         }
     }
 
+    func clear(request: Request) throws -> EventLoopFuture<String> {
+        return TodoList.query(on: request.db).all()
+            .map { list in
+                list.forEach { $0.delete(on: request.db) }
+                return "Cleared"
+            }
+    }
+
     private func fetchTodoSet(from request: Request) -> EventLoopFuture<TodoList?> {
         return TodoList.query(on: request.db)
             .all()
